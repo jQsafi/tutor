@@ -500,7 +500,7 @@ messageInput.focus();
             const messageElement = document.createElement('div');
             messageElement.classList.add('message');
             messageElement.classList.add(sender === 'You' ? 'sent-message' : 'received-message');
-            // const html = marked.parse(message, { breaks: true, smartypants: true });
+            const html = marked.parse(message, { breaks: true, smartypants: true });
             messageElement.innerHTML = html;
             chatMessages.appendChild(messageElement);
             chatMessages.scrollTop = chatMessages.scrollHeight;
